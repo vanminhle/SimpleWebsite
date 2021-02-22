@@ -6,10 +6,10 @@
 		<?php 
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
 			# Heroku credential 
-			$host_heroku = "ec2-18-206-84-251.compute-1.amazonaws.com";
-			$db_heroku = "d8k42dnhtd0o9i";
-			$user_heroku = "crmjpgdtqgprga";
-			$pw_heroku = "0d86d0fb5f24be75ffb6728bb2ffaa6762b75489e8923fda3cdf71c519a99d67";
+			$host_heroku = "ec2-54-228-174-49.eu-west-1.compute.amazonaws.com";
+			$db_heroku = "d47qigujn6mk4n";
+			$user_heroku = "lxqpfzxzwogzuc";
+			$pw_heroku = "677fee1c648012591045d18eece4d0744fe1090e5d2dcc74350750126d6c988f";
 			# Create connection to Heroku Postgres
 			$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 			$pg_heroku = pg_connect($conn_string);
@@ -19,7 +19,7 @@
 				die('Error: Could not connect: ' . pg_last_error());
 			}
 			# Get data by query
-			$query = 'select * from test_lab6';
+			$query = 'select * from test_heroku6';
 			$result = pg_query($pg_heroku, $query);
 			# Display data column by column
 			$i = 0;
